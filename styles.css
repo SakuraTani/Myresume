@@ -1,0 +1,596 @@
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* --css reset */
+
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap');
+
+:root{
+    --dk-green: rgb(33, 56, 56);
+    --mint: rgb(162, 210, 204);
+    --neon-yellow: #EFFD9F;
+    --white: #f0f0f0;
+    --body-fonts: "EB Garamond", serif;
+    --img: url("images/sora-sagano-Dksk8szLRN0-unsplash.jpg");
+}
+
+html {
+    position: relative;
+    background-image: var(--img);
+    font-family: var(--body-fonts);
+    font-size: 16px;
+}
+
+body {    
+    margin: 0 auto; 
+    line-height: 1.5;
+}
+
+main  {
+    padding: 3em;
+    background-color: rgba(218, 218, 218, 0.7);
+}
+
+.profile img {
+    border-radius: 50%;
+    border: 3px solid var(--neon-yellow);
+}
+
+.profile li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+header {
+    background-color: rgb(33, 56, 56, 0.7);
+    padding: 1.5em 1em 0 0;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.contacts {
+    display: grid;
+    justify-items: start;
+    padding: 1em;
+    gap: 10px;
+}
+
+nav ul li {
+    padding: 10px;
+}
+
+nav ul a {
+    color: var(--neon-yellow);
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 600;
+    padding: 10px;
+}
+
+.home-button {
+    position: fixed;
+    background-color: var(--dk-green);
+    bottom: 20px;
+    right: 10px;
+    z-index: 10;
+    padding: 1em 3px;
+}
+
+span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 2px;
+}
+
+.contacts a {
+    text-decoration: none;
+    color: var(--white);
+}
+
+.profile h2 {
+    color: var(--neon-yellow);
+}
+
+.contacts a:hover, #experience a:hover, #aboutme a:hover {
+    color: var(--mint);
+    text-decoration: underline;
+}
+
+nav ul a:hover {
+    background-color: var(--mint);
+    color: var(--dk-green);
+    border: 2px solid var(--dk-green);
+}
+
+h2{
+    font-size: 26px;
+    font-weight: 700;
+    line-height: 1.7; 
+}
+
+h3 {
+    font-size: 19px;
+    font-weight: 700;
+}
+
+strong {
+    font-weight: bold;
+  }
+  
+em {
+    font-style: italic; 
+  }
+
+#aboutme, #experience, #skills #certification {
+    padding: 1em;
+    margin-bottom: 3em;
+}
+
+#aboutme h2, #experience h2, #skills h2, #certification h2 {
+    color: var(--neon-yellow);
+    display: inline-block;
+    border-bottom: 3px solid var(--neon-yellow);
+    margin-left: 2em;
+    margin-bottom: 1em;
+}
+
+#aboutme p {
+    margin-top: 1em;
+}
+
+#experience ul, #certification ul {
+    list-style-type: circle;
+    padding-left: 10px;
+    padding-top: 1em;
+}
+
+.lists {
+    padding-left: 1em;
+}
+
+#skills {
+    padding: 1em;
+    display: grid;
+}
+
+.skill {
+    color: var(--white);
+    background-color: var(--dk-green);
+    border-radius: 10px;
+    border: 3px solid var(--mint);
+    width: 300px;
+    padding: 2em;
+    margin: 1em;
+}
+
+.skill ul {
+    display: grid;
+    gap: 1em;
+}
+
+#skills h2 {
+    display: inline-block;
+}
+
+.skill h3 {
+    text-align: center;
+    color: var(--mint);
+    padding-bottom: 10px;
+}
+
+.skill h4 {
+    font-size: 14px;
+}
+
+.skill-line {
+    position: relative;
+    width: 100%;
+    height: 5px; 
+    background-color: #e0e0e0;
+    border-radius: 5px;
+}
+
+.illustrator-line {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 65%;
+    background-color: var(--neon-yellow);
+    height: 5px;
+}
+
+.illustrator-circle {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 15px;
+    height: 15px;
+    background-color: var(--neon-yellow); 
+    border-radius: 50%;
+    left: 65%; 
+}
+
+.photoshop-line {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 60%;
+    background-color: var(--neon-yellow);
+    height: 5px;
+}
+
+.photoshop-circle {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 15px;
+    height: 15px;
+    background-color: var(--neon-yellow);
+    border-radius: 50%;
+    left: 60%;
+}
+
+.indesign-line {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 50%;
+    background-color: var(--neon-yellow);
+    height: 5px;
+}
+
+.indesign-circle {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 15px;
+    height: 15px;
+    background-color: var(--neon-yellow);
+    border-radius: 50%;
+    left: 50%;
+}
+
+.figma-line {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 78%;
+    background-color: var(--neon-yellow);
+    height: 5px;
+}
+
+.figma-circle {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 15px;
+    height: 15px;
+    background-color: var(--neon-yellow);
+    border-radius: 50%;
+    left: 78%;
+}
+
+.html-line {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 70%;
+    background-color: var(--neon-yellow);
+    height: 5px;
+}
+
+.html-circle {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 15px;
+    height: 15px;
+    background-color: var(--neon-yellow);
+    border-radius: 50%;
+    left: 70%;
+}
+
+.css-line {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 67%;
+    background-color: var(--neon-yellow);
+    height: 5px;
+}
+
+.css-circle {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 15px;
+    height: 15px;
+    background-color: var(--neon-yellow);
+    border-radius: 50%;
+    left: 67%;
+}
+
+.japanese-line {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+    background-color: var(--neon-yellow);
+    height: 5px;
+}
+
+.japanese-circle {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 15px;
+    height: 15px;
+    background-color: var(--neon-yellow);
+    border-radius: 50%;
+    left: 100%;
+}
+
+.english-line {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 85%;
+    background-color: var(--neon-yellow);
+    height: 5px;
+}
+
+.english-circle {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 15px;
+    height: 15px;
+    background-color: var(--neon-yellow);
+    border-radius: 50%;
+    left: 85%;
+}
+
+footer {
+    text-align: center;
+    padding: 3em;
+    color: var(--white);
+}
+
+@media screen and (min-width: 414px){
+    main  {
+        margin-top: 60em;
+    }
+
+    header nav ul {
+        position: relative;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        justify-items: center;
+        gap: 5px;
+    }
+
+    #home {
+        display: flex;
+        flex-direction: column;
+        flex-direction: column-reverse;
+        position: absolute;
+        top: 150px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .profile {
+        padding: 2em;
+        background-color: var(--dk-green);
+        color: var(--white);
+        border: 3px solid var(--neon-yellow);
+        border-radius: 10px;
+        width: max-content;
+        text-align: center;
+    }
+
+    .welcome {
+        color: var(--white);
+        padding: 2em 5em;
+        width: max-content;
+        margin: 0 auto;
+    }
+
+    .welcome h2, .welcome p {
+        color: var(--neon-yellow);
+        text-align: center;
+    }
+
+    .welcome ul {
+        font-size: 20px;
+        font-weight: 700;
+        list-style: circle;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        align-items: flex-start;
+        align-content: center;
+        padding-top: 1em;
+        padding-left: 1em;
+    }
+
+    #aboutme ul li {
+        border-radius: 10px;
+        border: 3px solid var(--mint);
+        background-color: var(--dk-green);
+        padding: 1em;
+        display: flex;
+        width: 300px;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #aboutme ul {
+        padding: 1em;
+        color: var(--white);
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 1em;
+        justify-content: center;
+        justify-items: center;
+    }
+
+    #aboutme a {
+        color: var(--neon-yellow);
+        font-size: 18px;
+    }
+
+    #aboutme img {
+        margin-top: 1em;
+    }
+
+    .video-upload {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+        padding-top: 2em;
+    }
+
+    #skills {
+        position: relative;
+        justify-content: center;
+        justify-items: baseline;
+    }
+
+    #skills h2 {
+        position: absolute;
+        top: -50px;
+    }
+
+    #experience ul{
+        display: flex;
+        flex-wrap: wrap;
+        align-content: center;
+        flex-direction: column;
+    }
+
+    #certification ul{
+        display: flex;
+        align-content: center;
+        flex-direction: column;
+        flex-wrap: wrap;
+        padding-top: 1em;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    main  {
+        margin-top: 45em;
+    }
+
+    header nav ul {
+        grid-template-columns: repeat(4,auto);
+    }
+    
+    #home {
+        flex-direction: row;
+        top: 150px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    .profile {
+        position: unset;
+        transform: none;
+        margin: 10px;
+    }
+
+    .welcome {
+        margin: 10px;
+    }
+
+    .welcome li {
+        padding-bottom: 10px;
+    }
+
+    #aboutme ul {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    #aboutme {
+        margin-bottom: 10em;
+    }
+
+    #skills {
+        grid-template-columns: repeat(2,auto);
+        align-items: start;
+        margin-bottom: 5em;
+    }
+
+    #experience {
+        margin-bottom: 5em;
+    }
+}
+
+@media screen and (min-width: 1280px) {
+    #aboutme ul {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+
+    #aboutme ul li {
+        width: 250px;
+    }
+
+    #skills {
+        grid-template-columns: repeat(3,auto);
+    }
+}
+
+
+/* --behance svg icon-- */
+ /* <svg width="64px" height="64px" viewBox="0 -3.5 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <title>behance [#163]</title> <desc>Created with Sketch.</desc> <defs> </defs> <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"> <g id="Dribbble-Light-Preview" transform="translate(-100.000000, -7482.000000)" fill="#000000"> <g id="icons" transform="translate(56.000000, 160.000000)"> <path d="M56.981,7324.11726 L62.069,7324.11726 L62.069,7322.65997 L56.981,7322.65997 L56.981,7324.11726 Z M59.489,7327.04322 C58.354,7327.04322 57.492,7327.74656 57.409,7329.04584 L61.481,7329.04584 C61.205,7327.50385 60.52,7327.04322 59.489,7327.04322 L59.489,7327.04322 Z M59.648,7333.06968 C60.696,7333.06968 61.465,7332.40764 61.622,7331.84992 L63.826,7331.84992 C63.196,7333.86701 61.895,7335 59.559,7335 C56.578,7335 54.905,7332.87964 54.905,7330.06626 C54.905,7323.44077 64.465,7323.20323 63.985,7330.68491 L57.409,7330.68491 C57.473,7332.20418 58.1,7333.06968 59.648,7333.06968 L59.648,7333.06968 Z M49.73,7332.77842 C50.933,7332.77842 51.775,7332.31572 51.775,7331.06705 C51.775,7329.77191 51.031,7329.21006 49.782,7329.21006 L46.768,7329.21006 L46.768,7332.77842 L49.73,7332.77842 Z M49.571,7327.26218 C50.572,7327.26218 51.263,7326.79638 51.263,7325.71399 C51.263,7324.57377 50.459,7324.22158 49.36,7324.22158 L46.768,7324.22158 L46.768,7327.26218 L49.571,7327.26218 L49.571,7327.26218 Z M49.924,7322 C52.295,7322 53.943,7322.7839 53.943,7325.22237 C53.943,7326.42973 53.458,7327.32931 52.233,7327.93557 C53.801,7328.40137 54.543,7329.62422 54.543,7331.23127 C54.543,7333.78232 52.52,7335 50.1,7335 L44,7335 L44,7322 L49.924,7322 Z" id="behance-[#163]"> </path> </g> </g> </g> </g></svg> */
